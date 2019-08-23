@@ -6,7 +6,7 @@ gcc -o Codigo.exe Codigo.c
 Contenido de la UDA
 1. Estructura de un programa en C
 2. Variables
-	Ejemplo001.c
+	2.1. Ejemplo001.c
 3. Operadores básicos
 	Ejemplo002.c
 	Ejemplo003.c
