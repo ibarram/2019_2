@@ -14,17 +14,25 @@ Contenido de la UDA
 3. Operadores básicos
 
 	Ejemplo002.c
+	
 	Ejemplo003.c
 	
 4. Manejo de las sentencias de control
 
 	Ejemplo004.c, Calculo del valor PI
+	
 	Ejemplo005.c, Exponencial de x
+	
 	Ejemplo006.c, Exponencial de x reducido
-	Ejemplo007.c, Exponencial de x reducido y convergenre
+	
+	Ejemplo007.c, Exponencial de x reducido y convergente
+	
 	Ejemplo008.c, Seno de x
+	
 	Ejemplo009.c, Seno de x reducido
+	
 	Ejemplo010.c, Seno de x reducido y convergente
+	
 	Ejemplo011.c, Seno inverso de x
 
 5. Arreglos
