@@ -8,13 +8,16 @@ Contenido de la UDA
 1. Estructura de un programa en C
 
 2. Variables
+
 	Ejemplo001.c
 	
 3. Operadores básicos
+
 	Ejemplo002.c
 	Ejemplo003.c
 	
 4. Manejo de las sentencias de control
+
 	Ejemplo004.c, Calculo del valor PI
 	Ejemplo005.c, Exponencial de x
 	Ejemplo006.c, Exponencial de x reducido
