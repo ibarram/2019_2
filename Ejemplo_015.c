@@ -28,7 +28,20 @@ int main(int argc, char *argv[])
         x[i]=(rand()%(max-min+1))+min;
         printf("x[%d] = %d\n", i+1, x[i]);
     }
-
+    for(i=min; i<=max; i++)
+        h[i-min]=0;
+    for(i=0; i<n; i++)
+        h[x[i]-min]++;
+    for(i=min, j=0; i<=max; i++)
+    {
+        while(h[i-min])
+        {
+            x[j++]=i;
+            h[i-min]--;
+        }
+        if(j==n)
+            break;
+    }
     for(i=0; i<n; i++)
         printf("x[%d] = %d\n", i+1, x[i]);
     return 0;
