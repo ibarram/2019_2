@@ -44,67 +44,63 @@ float varianza1(float *x, int n)
 	return (m2-(m1*m1)/n)/n;
 }
 
-float media2(float *x, int n, int f)
+float media2(float *x, int n)
 {
 	static int i=0;
-	if(f)
-	{
-		f=0;
-		i=0;
-	}
 	if(i==n)
+	{
+		i=0;
 		return 0;
+	}
 	else
 	{
 		i++;
-		return x[0]/n+media2(x+1, n, f);
+		return x[0]/n+media2(x+1, n);
 	}
 }
 
-float suma2(float *x, int n, int f)
+float suma2(float *x, int n)
 {
 	static int i=0;
-	if(f)
-	{
-		f=0;
-		i=0;
-	}
 	if(i==n)
+	{
+		i=0;
 		return 0;
+	}
 	else
 	{
 		i++;
-		return (x[0]*x[0])+suma2(x+1, n, f);
+		return (x[0]*x[0])+suma2(x+1, n);
 	}
 }
 
 float varianza2(float *x, int n)
 {
 	float m1, m2;
-	m1 = media2(x, n, 1);
-	m2 = suma2(x, n, 1)/n;
+	m1 = media2(x, n);
+	m2 = suma2(x, n)/n;
 	return (m2-m1*m1);
 }
 
-float varianza3(float *x, int n, int f)
+float varianza3(float *x, int n)
 {
 	static int i=0;
 	static float m1=0, m2=0;
-	if(f)
+	float v;
+	if(i==n)
 	{
-		f=0;
 		i=0;
+		v=(m2-m1*m1);
 		m1=0;
 		m2=0;
+		return v;
 	}
-	if(i==n)
-		return (m2-m1*m1);
 	else
 	{
 		i++;
 		m2+=((x[0]*x[0])/n);
 		m1+=(x[0]/n);
-		return varianza3(x+1,n,0);
+		return varianza3(x+1,n);
 	}
 }
 
@@ -136,9 +132,9 @@ int main(int argc, char *argv[])
 	imprimir(pX, n);
 	printf("media = %f\n", media1(pX, n));
 	printf("varianza = %f\n", varianza1(pX, n));
-	printf("media = %f\n", media2(pX, n,1));
+	printf("media = %f\n", media2(pX, n));
 	printf("varianza = %f\n", varianza2(pX, n));
-	printf("varianza = %f\n", varianza3(pX, n, 1));
+	printf("varianza = %f\n", varianza3(pX, n));
 	free(pX);
 	return 0;
 }
