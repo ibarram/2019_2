@@ -26,10 +26,13 @@ float seno(float x, int n)
         return x;
 }
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
-    int n;
+    int n, i;
     float x, px, sx;
+    printf("%d\n", argc);
+    for(i=0; i<argc; i++)
+        printf("%s\n", argv[i]);
     printf("Ingrese la potencia: ");
     scanf("%d", &n);
     printf("Ingrese el valor: ");
